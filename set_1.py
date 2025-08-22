@@ -1,0 +1,16 @@
+import math
+
+def savings(gross_pay, tax_rate, expenses):
+    after_tax = math.floor(gross_pay * (1 - tax_rate))
+    remaining = after_tax - expenses
+    return remaining
+
+def material_waste(total_material, material_units, num_jobs, job_consumption):
+    total_consumed = num_jobs * job_consumption
+    remaining_material = total_material - total_consumed
+    return str(remaining_material) + material_units
+
+def interest(principal, rate, periods):
+    interest_amount = principal * (rate * periods)
+    final_value = principal + interest_amount
+    return math.floor(final_value)
